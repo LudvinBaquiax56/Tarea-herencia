@@ -10,8 +10,16 @@ package Vehiculo;
  * @author baquiax
  */
 public class VehiculoCarga extends Vehiculo implements Movimiento {
+
     private static final String COMBUSTIBLE = "Diesel";
 
+    /**
+     *
+     * @param cantidadGalones
+     * @param NoPasajeros
+     * @param VelocidadMaxima
+     * @param aceleracion
+     */
     public VehiculoCarga(int cantidadGalones, int NoPasajeros, int VelocidadMaxima, int aceleracion) {
         super(COMBUSTIBLE, cantidadGalones, NoPasajeros, VelocidadMaxima, aceleracion);
     }
