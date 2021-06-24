@@ -108,7 +108,9 @@ public abstract class Vehiculo {
 
     @Override
     public String toString() {
-        return "Vehiculo{" + "combustible=" + combustible + ", cantidadGalones=" + cantidadGalones + ", NoPasajeros=" + NoPasajeros + ", VelocidadMaxima=" + VelocidadMaxima + ", aceleracion=" + aceleracion + '}';
+        return "Vehiculo{" + "combustible=" + combustible + ", cantidadGalones="
+                + cantidadGalones + ", NoPasajeros=" + NoPasajeros + ", VelocidadMaxima=" 
+                + VelocidadMaxima + ", aceleracion=" + aceleracion + '}';
     }
 
 }

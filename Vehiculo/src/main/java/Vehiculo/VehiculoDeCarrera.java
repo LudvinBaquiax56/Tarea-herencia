@@ -9,15 +9,18 @@ package Vehiculo;
  *
  * @author baquiax
  */
-public class VehiculoCarga extends Vehiculo implements Movimiento {
+public class VehiculoDeCarrera extends Vehiculo implements Movimiento {
 
-    public VehiculoCarga(int cantidadGalones, int NoPasajeros, int VelocidadMaxima, int aceleracion) {
-        super("Diesel", cantidadGalones, NoPasajeros, VelocidadMaxima, aceleracion);
+    private static final String COMBUSTIBLE = "Gasolina";
+
+    public VehiculoDeCarrera(int cantidadGalones, int NoPasajeros, int VelocidadMaxima, int aceleracion) {
+        super(COMBUSTIBLE, cantidadGalones, NoPasajeros, VelocidadMaxima, aceleracion);
     }
 
     @Override
     public void funcionVehiculo() {
-        System.out.println("Puedo transportar cargas muy pesadas ");
+        System.out.println("Soy un vehiculo de carreras, tengo una acelaracion base: " + super.getAceleracion());
+        System.out.println("y la puedo triplicar" + triplicarAceleracion());//To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
@@ -32,9 +35,13 @@ public class VehiculoCarga extends Vehiculo implements Movimiento {
 
     @Override
     public String toString() {
-        return "VehiculoCarga{" + "combustible=" + super.getCombustible() + ", cantidadGalones="
+        return "Vehiculo de Carrera{" + "combustible=" + super.getCombustible() + ", cantidadGalones="
                 + super.getCantidadGalones() + ", NoPasajeros=" + super.getNoPasajeros()
                 + ", VelocidadMaxima=" + super.getVelocidadMaxima() + ", aceleracion=" + super.getAceleracion() + '}';
+    }
+
+    public int triplicarAceleracion() {
+        return super.getAceleracion() * 3;
     }
 
 }
